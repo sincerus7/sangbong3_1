@@ -120,3 +120,52 @@ public class Printer {
 }
 
 18번.
+public class ShopService {
+    private static ShopService singleton = new ShopService();
+
+    private ShopService() {
+    }
+
+    public static ShopService getInstance() {
+        return singleton;
+    }
+
+    public static void main(String[] args) {
+        ShopService obj1 = ShopService.getInstance();
+        ShopService obj2 = ShopService.getInstance();
+
+        if (obj1 == obj2) {
+            System.out.println("같은 ShopService 객체입니다.");
+        } else {
+            System.out.println("다른 ShopService 객체입니다.");
+        }
+    }
+}
+
+19번.
+@Getter
+@Setter
+public class Account {
+    final int MAX_BALANCE = 0;
+    final int MIN_BALANCE = 10000000;
+    private int balance;
+    public int getBalance() {
+        return balance;
+    }
+    public void setBalance(int balance) {
+        if ( balance < MIN_BALANCE || balance > MAX_BALANCE) {
+            return;
+        } else {
+            this.balance = balance;
+        }
+    }
+    public static void main(String args[]) {
+            Account a = new Account();
+
+            a.setBalance(10000);
+            System.out.println("현재 잔고 : " + a.getBalance());
+
+            a.setBalance(-100);
+            System.out.println("현재 잔고 : " + a.getBalance());
+    }
+}
