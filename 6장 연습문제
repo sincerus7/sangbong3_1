@@ -12,3 +12,111 @@
 12번. 12-1 필드
       12-2 생성자
       12-3 메소드
+13번. 
+public class Member {
+    String name = "";
+    String id = "";
+    String password = "";
+    int age = 0;
+}
+
+14번. 
+public class Member {
+    String name = "";
+    String id = "";
+    String password = "";
+    int age = 0;
+
+    public Member(String name, String id){
+        this.name = name;
+        this.id = id;
+    }
+    
+    public static void main(String[] args) {
+        Member user1 = new Member("홍길동", "hong");
+    }
+}
+
+15번.
+public class MemberService {
+
+    public boolean login(String id, String password) {
+        boolean res = false;
+        if (id == "hong" && password == "12345") {
+            res = true;
+        }
+        return res;
+    }
+
+    public void logout(String id) {
+        System.out.println(id + "님이 로그아웃 되었습니다.");
+    }
+
+    public static void main(String[] args) {
+        MemberService memberService = new MemberService();
+        boolean result = memberService.login("hong", "12345");
+
+        if (result) {
+            System.out.println("로그인 되었습니다.");
+            memberService.logout("hong");
+        } else {
+            System.out.println("id 또는 password가 올바르지 않습니다.");
+        }
+
+    }
+}
+
+16번.
+public class Printer {
+    int println(int num){
+        return num;
+    }
+
+    boolean println(boolean bol){
+        return bol;
+    }
+
+    double println(double dnum){
+        return dnum;
+    }
+
+    String println(String str){
+        return str;
+    }
+
+    public static void main(String[] args) {
+        Printer printer = new Printer();
+        printer.println(10);
+        printer.println(true);
+        printer.println(5.7);
+        printer.println("홍길동");
+    }
+}
+
+17번.
+public class Printer {
+    static int println(int num){
+        return num;
+    }
+
+    static boolean println(boolean bol){
+        return bol;
+    }
+
+    static double println(double dnum){
+        return dnum;
+    }
+
+    static String println(String str){
+        return str;
+    }
+
+    public static void main(String[] args) {
+        Printer.println(10);
+        Printer.println(true);
+        Printer.println(5.7);
+        Printer.println("홍길동");
+    }
+}
+
+18번.
