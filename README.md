@@ -2,5 +2,5 @@
 
 ## 구성원
 ### 장상원
-### 유병훈
+### 유병훈 qud4475@naver.com
 ### 김준혁 rlawns256@naver.com
