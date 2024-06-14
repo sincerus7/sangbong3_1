@@ -22,18 +22,14 @@ public class Member {
 
 14번. 
 public class Member {
-    String name = "";
-    String id = "";
-    String password = "";
-    int age = 0;
+    private String name = "";
+    private String id = "";
+    private String password = "";
+    private int age = 0;
 
     public Member(String name, String id){
         this.name = name;
         this.id = id;
-    }
-    
-    public static void main(String[] args) {
-        Member user1 = new Member("홍길동", "hong");
     }
 }
 
@@ -42,7 +38,7 @@ public class MemberService {
 
     public boolean login(String id, String password) {
         boolean res = false;
-        if (id == "hong" && password == "12345") {
+        if ("hong".equals(id) && "12345".equals(password)) {
             res = true;
         }
         return res;
