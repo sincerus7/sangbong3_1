@@ -64,24 +64,20 @@ public class MemberService {
 
 16번.
 public class Printer {
-    int println(int num){
+    public void println(int num){
         System.out.println(num);
-        return num;
     }
 
-    boolean println(boolean bol){
+    public void println(boolean bol){
         System.out.println(bol);
-        return bol;
     }
 
-    double println(double dnum){
+    public void println(double dnum){
         System.out.println(dnum);
-        return dnum;
     }
 
-    String println(String str){
+    public void println(String str){
         System.out.println(str);
-        return str;
     }
 
     public static void main(String[] args) {
@@ -96,24 +92,21 @@ public class Printer {
 
 17번.
 public class Printer {
-    static int println(int num){
+    public static void println(int num){
         System.out.println(num);
-        return num;
     }
 
-    static boolean println(boolean bol){
+    public static void println(boolean bol){
         System.out.println(bol);
         return bol;
     }
 
-    static double println(double dnum){
+    public static void println(double dnum){
         System.out.println(dnum);
-        return dnum;
     }
 
-    static String println(String str){
+    public static void println(String str){
         System.out.println(str);
-        return str;
     }
 
     public static void main(String[] args) {
