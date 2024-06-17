@@ -20,4 +20,4 @@ Child() call
 9번. 2
 10번. 추상메소드 오버라이드 해줘야 된다.
 11번. super
-12번. a instanceof(new c)
+12번. a instanceof C c 
